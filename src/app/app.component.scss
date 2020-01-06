@@ -1,0 +1,17 @@
+.autocomplete {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 400px;
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  li {
+    list-style: none;
+  }
+  li.active {
+    background-color: #9999ff;
+    color: white;
+  }
+}
