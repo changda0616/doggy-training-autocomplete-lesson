@@ -8,21 +8,7 @@
   />
 </div>
 
-<div class="autocomplete">
-  <input
-    #tinput
-    (keydown.arrowdown)="increaseActiveIdx()"
-    (keydown.arrowup)="decreaseActiveIdx()"
-    (keydown.enter)="updateInput()"
-    [(ngModel)]="inputText"
-  />
-  <ul>
-    <li
-      *ngFor="let item of suggestList; let index = index"
-      [ngClass]="{ active: index === activeIndex }"
-      (click)="updateInput(index)"
-    >
-      {{ item?.title }}
-    </li>
-  </ul>
-</div>
+<app-autocomplete
+  [list]="suggestList"
+  (newInput)="getSuggestList($event)"
+></app-autocomplete>
