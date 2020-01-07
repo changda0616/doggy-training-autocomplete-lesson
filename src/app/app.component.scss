@@ -9,9 +9,9 @@
   }
   li {
     list-style: none;
-  }
-  li.active {
-    background-color: #9999ff;
-    color: white;
+    &:hover, &.active {
+      background-color: #9999ff;
+      color: white;
+    }
   }
 }
