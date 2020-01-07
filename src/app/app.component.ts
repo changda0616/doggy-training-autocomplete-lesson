@@ -36,7 +36,7 @@ export class AppComponent {
     if (this.activeIndex === null) {
       this.activeIndex = 0;
     } else {
-      this.activeIndex += 1;
+      this.activeIndex -= 1;
     }
   }
 
@@ -44,7 +44,7 @@ export class AppComponent {
     if (this.activeIndex === null) {
       this.activeIndex = 0;
     } else {
-      this.activeIndex -= 1;
+      this.activeIndex += 1;
     }
   }
 

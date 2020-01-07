@@ -11,8 +11,8 @@
 <div class="autocomplete">
   <input
     (keyup)="getSuggestList($event)"
-    (keydown.arrowdown)="decreaseActiveIdx()"
-    (keydown.arrowup)="increaseActiveIdx()"
+    (keydown.arrowdown)="increaseActiveIdx()"
+    (keydown.arrowup)="decreaseActiveIdx()"
     (keydown.enter)="updateInput()"
     [(ngModel)]="inputText"
   />
