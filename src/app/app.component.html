@@ -10,11 +10,11 @@
 
 <div class="autocomplete">
   <input
-    (ngModelChange)="getSuggestList($event)"
+    #tinput
     (keydown.arrowdown)="increaseActiveIdx()"
     (keydown.arrowup)="decreaseActiveIdx()"
     (keydown.enter)="updateInput()"
-    [ngModel]="inputText"
+    [(ngModel)]="inputText"
   />
   <ul>
     <li
@@ -22,7 +22,7 @@
       [ngClass]="{ active: index === activeIndex }"
       (click)="updateInput(index)"
     >
-      {{ item.title }}
+      {{ item?.title }}
     </li>
   </ul>
 </div>
